@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        function submitOnEnter(event) {
+            if (event.which === 13) {
+                event.target.form.dispatchEvent(new Event("submit", { cancelable: true }));
+                event.preventDefault(); // Prevents the addition of a new line in the text field (not needed in a lot of cases)
+            }
+        }
+
+        document.getElementById("usermsg").addEventListener("keypress", submitOnEnter);
+    </script>
+    <style>
+        body {
+            margin: 0 auto;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .container {
+            border: 2px solid #585A5A;
+            background-color:#79D0E6   ;
+            border-radius: 30px;
+            padding: 7px;
+            margin: 10px 0;
+        }
+
+        .darker {
+            border-color: #707171  ;
+            background-color: #9BC6D0 ;
+            
+        }
+
+        .container::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .container img {
+            float: left;
+            max-width: 70px;
+            max-height: 70px;
+            width: 100%;
+            margin-right: 20px;
+            border-radius: 50%;
+        }
+
+        .container img.right {
+            object-fit: inherit;
+            float: right;
+            margin-left: 20px;
+            margin-right: 0;
+        }
+
+        .time-right {
+            float: right;
+            color: grey;
+        }
+
+        .time-left {
+            float: left;
+            color: grey;
+        }
+
+        /* .textarea
+         {
+            width: 100%;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        } */
+        .sendbtn {
+            min-width: 80px;
+            min-height: 30px;
+            background-color: green;
+            padding: 100 px;
+            border-radius: 10px;
+            color:white;
+            font-size: 15px;
+          
+        }
+        p
+        {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+<div>
+    <h1 style="text-align: center">Chat Messages</h1>
+</div>
+    <div class="container">
+        <img src="../../assets/Images/vasilyrosca.jpg" alt="Avatar" style="width:100%;">
+        <p>Hello. How are you today?</p>
+        <span class="time-right">11:00</span>
+    </div>
+
+    <div class="container darker">
+        <img src="../../assets/Images/typing.jpg" alt="Avatar" class="right" style="width:100%;">
+        <p style="float: right;">Hey! I'm fine. Thanks for asking!</p>
+        <span class="time-left">11:01</span>
+    </div>
+
+    <div class="container">
+        <img src="../../assets/Images/vasilyrosca.jpg" alt="Avatar" style="width:100%;">
+        <p >Sweet! So, what do you wanna do today?</p>
+        <span class="time-right">11:02</span>
+    </div>
+
+    <!-- <div class="container darker">
+        <img src="/w3images/avatar_g2.jpg" alt="Avatar" style="width:100%;">
+        <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
+        <span class="time-left">11:05</span>
+    </div> -->
+    <div>
+        <form name="message" action="">
+            <textarea class="textarea" name="usermsg" autocomplete="off" type="text" id="usermsg" rows="7" cols="50"
+                style="width: 750px; margin-left: 20px; border-block-color: black">
+                </textarea>
+            <br />
+
+            <p style="margin-left: 360px;"><input class="sendbtn" name="submitmsg" type="submit" id="submitmsg"
+                    value="Send" /></p>
+        </form>
+    </div>
+
+</body>
+
+</html>

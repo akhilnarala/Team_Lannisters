@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1">
     <script>
         // Get the modal
         var modal = document.getElementById('id01');
@@ -12,12 +12,12 @@
                 modal.style.display = "none";
             }
         }
-    </script>
+    </script> -->
     <style>
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            /* background-image: url('../../assets/Images/925715781s.jpg') */
+            background: linear-gradient(to top, #ff0000 0%, #ff9966 100%);
         }
 
         /* @media screen and (max-width: 600px) {
@@ -30,7 +30,7 @@
         .topnav {
             overflow: hidden;
             background-color: #0E0E0E;
-            position: fixed;
+            position: relative;
             max-width: 100%;
             min-width: 1000px;
             list-style-type: none;
@@ -71,24 +71,25 @@
             float: left;
             object-fit: inherit;
             display: block;
-            height: 5%;
-            width: 10%;
+            height: 8%;
+            width: 12%;
             position: relative;
             object-fit: inherit;
         }
     </style>
 </head>
-<body>
+<body  >
     <div class="topnav">
-        <a routerLink='/login' onclick="document.getElementById('id01').style.display='block'"
-            style="width:auto;">Login</a>
-        <a routerLink='chatbot' href="#contact">Ask a bot</a>
+        <a routerLink='/login' >Login</a>
+        <a routerLink='/chatbot' href="#chatbot">Ask a bot</a>
         <a routerLink='/faq' href="#faq">FAQ</a>
         <a routerLink='/challenges' href="#challenges">Challenges</a>
-        <a routerLink='/tq' href="#tq">What's New</a>
-        <a href="#home">Home</a>
+        <a routerLink='/tq' href="#tq">Tech Queries</a>
+        <a routerLink='/home' href="#home">Home</a>
         <img src="./assets/Images/dbs-bank.png">
     </div>
     <div style="color:red"></div>
 </body>
-</html>
+</html> 
+<!-- onclick="document.getElementById('id01').style.display='block'"
+            style="width:auto;" -->

@@ -25,7 +25,7 @@ import { HomeComponent } from './home/home.component';
     PageNotFoundComponent,
     HomeComponent,
     ChatbotComponent,
-    FaqComponent,
+     FaqComponent,
     LoginComponent,
     ChallengesComponent,
     TqComponent,

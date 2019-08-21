@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script> -->
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(to top, #ff0000 0%, #ff9966 100%);
+        }
+
+        /* @media screen and (max-width: 600px) {
+            ul.topnav li.left,
+            ul.topnav li {
+                float: none;
+            }
+        } */
+
+        .topnav {
+            overflow: hidden;
+            background-color: #0E0E0E;
+            position: relative;
+            max-width: 100%;
+            min-width: 1000px;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .topnav a {
+            float: right;
+            color: #f2f2f2;
+            font-family: 'Comic Sans';
+            text-align: center;
+            padding: 18px 16px;
+            text-decoration: none;
+            font-size: 22px;
+            position: relative;
+        }
+
+        .topnav a:hover:not(.active) {
+            background-color: #ddd;
+            color: #000000;
+            object-fit: inherit;
+
+        }
+
+        .topnav .left {
+            float: left;
+        }
+
+        .topnav a.active {
+            background-color: #D00606;
+            color: white;
+            object-fit: inherit;
+        }
+
+        .topnav img {
+            float: left;
+            object-fit: inherit;
+            display: block;
+            height: 8%;
+            width: 12%;
+            position: relative;
+            object-fit: inherit;
+        }
+    </style>
+</head>
+<body  >
+    <div class="topnav">
+        <a routerLink='/login' >Login</a>
+        <a routerLink='/chatbot' href="#chatbot">Ask a bot</a>
+        <a routerLink='/faq' href="#faq">FAQ</a>
+        <a routerLink='/challenges' href="#challenges">Challenges</a>
+        <a routerLink='/tq' href="#tq">Tech Queries</a>
+        <a routerLink='/home' href="#home">Home</a>
+        <img src="./assets/Images/dbs-bank.png">
+    </div>
+    <div style="color:red"></div>
+</body>
+</html> 
+<!-- onclick="document.getElementById('id01').style.display='block'"
+            style="width:auto;" -->

@@ -1,0 +1,76 @@
+<app-navbar></app-navbar>
+<html>
+
+<head>
+</head>
+
+<body>
+    <div [style.display]="id01" class="modal">
+        <form class="modal-content animate" action="">
+            <div class="imgcontainer">
+                <span class="close" (click)='onClickGone()' title="Close Modal">&times;</span>
+                <h1>Login</h1>
+                <!-- <img src="./assets/Images/dbs-bank.png" alt="Avatar" class="avatar"> -->
+            </div>
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+                <button type="submit">Login</button>
+                <!-- <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label> -->
+            </div>
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" (click)='onClickGone()' class="cancelbtn">Cancel</button>
+                <span class="psw"> New User? <a (click)='onRegister()'>Register</a></span>
+                <!-- <span class="psw"><a href="#">Forgot password?</a></span> -->
+            </div>
+        </form>
+    </div>
+    <div [style.display]="id02" class="modal">
+        <form class="modal-content animate">
+            <div class="imgcontainer">
+                <span class="close" title="Close Modal" (click)='onClickGone()' (click)='onClickGone()'>&times;</span>
+
+                <h1>Register</h1>
+            </div>
+            <div class="container form-group">
+                <div>
+                    <label for="name"><b>Name</b></label>
+                    <input type="text" class="form-control" placeholder="Enter Name" name="name">
+
+                </div>
+                <div>
+                    <label for="emailid"><b>Email Id</b></label>
+                    <input type="text" class="form-control" placeholder="Enter Email id" name="email">
+
+                </div>
+                <div>
+                    <label for="password"><b>Password</b></label>
+                    <input type="password" class="form-control" placeholder="Enter Password" name="password">
+
+                </div>
+                <button type="submit">Register</button>
+
+            </div>
+            <div class="container" style="background-color:#f1f1f1"></div>
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" (click)='onClickGone()' class="cancelbtn">Cancel</button>
+            </div>
+        </form>
+    </div>
+    <div id="id03" class="modal">
+        <div class="modal-content animate">
+            <!-- <div class="imgcontainer">
+                        <span onclick="document.getElementById('id03').style.display='none'" class="close"
+                            title="Close Modal">&times;</span> -->
+
+            <h1>Registered</h1>
+            <!-- </div> -->
+        </div>
+    </div>
+</body>
+
+</html>

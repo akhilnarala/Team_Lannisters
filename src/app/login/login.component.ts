@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   public id01;
   public id02;
+  public val="password";
+  public val2="fa fa-eye icon";
   constructor(private router: Router) { }
 
   ngOnInit() {
@@ -23,5 +25,20 @@ onClickGone(){
 onRegister(){
   this.id01='none';
   this.id02='block';
+}
+viewPassword()
+{
+  
+
+  if (this.val == 'password')
+  {
+    this.val='text';
+    this.val2='fa fa-eye-slash icon';
+  }
+  else
+  {
+    this.val='password';
+    this.val2='fa fa-eye icon';
+  }
 }
 }

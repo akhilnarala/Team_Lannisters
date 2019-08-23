@@ -8,6 +8,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { LoginComponent } from './login/login.component';
 import { ChallengesComponent } from './challenges/challenges.component';
 import { HomeComponent } from './home/home.component';
+import { TqComponent } from './tq/tq.component';
 
 
 
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path:'chatbot',component:ChatbotComponent},
    {path:'challenges',component:ChallengesComponent},
   {path:'home',component:HomeComponent},
+  {path:'tq',component:TqComponent},
    {path:'**',component:PageNotFoundComponent},
 
 ];

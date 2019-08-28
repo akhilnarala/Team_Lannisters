@@ -1,4 +1,4 @@
-
+<!-- <app-navbar></app-navbar> -->
 <html>
 
 <head>
@@ -85,17 +85,18 @@
             <span>{{message1.message}}</span>
         </form>
     </div>
-    <div id="id03" class="modal">
-        <div class="modal-content animate">
-            <!-- <div class="imgcontainer">
-                        <span onclick="document.getElementById('id03').style.display='none'" class="close"
-                            title="Close Modal">&times;</span> -->
 
-            <h1>Registered</h1>
-            <!-- </div> -->
+    <!-- REGISTERED MODAL -->
+
+
+    <div [style.display]="id03" class="modal">
+        <div class="modal-content animate" style="margin-top: 300px">
+            <div class="imgcontainer">
+                <span class="close" (click)='onClickGone()' title="Close Modal">&times;</span>
+                <h1>{{str1}}</h1>
+            </div>
         </div>
     </div>
-
 
 
 </body>

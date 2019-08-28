@@ -14,9 +14,21 @@
             </div>
             <div class="container">
                 <label for="uname"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="uname" required>
+                <input type="text"   placeholder="Enter Username" name="uname" required>
                 <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
+                <div class="input-icons"> 
+                    <i [className]="val2" aria-hidden="true" (click)="viewPassword()"> 
+                    </i>
+                    <input [type]="val"
+                           type="password"
+                           placeholder="Password"> 
+                          
+                </div> 
+<!--                 
+                    <input type="password" id="password-field">
+                    <i id="pass-status" class="fa fa-eye" aria-hidden="true" (click)="viewPassword()"></i> -->
+               
+                <!-- <input type="password" placeholder="Enter Password" name="psw" required> -->
                 <button type="submit">Login</button>
                 <!-- <label>
                 <input type="checkbox" checked="checked" name="remember"> Remember me

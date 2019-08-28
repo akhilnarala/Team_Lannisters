@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -28,6 +29,8 @@ public class LoginController {
 		if (userExists != null) {
 			MyResponse resp = new MyResponse();
 			resp.setMessage("There is already a user registered with the email: " + user.getEmail());
+			resp.setUserId(null);
+			resp.setRegisterSuccess(false);
 			return ResponseEntity.ok(resp);
 		}
 
@@ -35,6 +38,8 @@ public class LoginController {
 			userService.saveUser(user);
 			MyResponse resp = new MyResponse();
 			resp.setMessage("User has been registered successfully with email: " + user.getEmail());
+			resp.setUserId(user.getId());
+			resp.setRegisterSuccess(true);
 			return ResponseEntity.ok(resp);
 		}
 	}
@@ -47,16 +52,18 @@ public class LoginController {
 			MyResponse resp = new MyResponse();
 			resp.setMessage("User Exists with the email and correct password: " + user.getEmail());
 			resp.setUserId(userExists.getId());
+			resp.setLoginSuccess(true);
 			return ResponseEntity.ok(resp);
 		} else if (userExists != null) {
 			MyResponse resp = new MyResponse();
 			resp.setMessage("User Exists with the email and incorrect password: " + user.getEmail());
-			resp.setUserId("0");
+			resp.setUserId(userExists.getId());
+			resp.setLoginSuccess(false);
 			return ResponseEntity.ok(resp);
 		} else {
 			MyResponse resp = new MyResponse();
 			resp.setMessage("User Not Exists with email : " + user.getEmail());
-			resp.setUserId("0");
+			resp.setUserId(null);
 			return ResponseEntity.ok(resp);
 		}
 	}
